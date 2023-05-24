@@ -1,5 +1,9 @@
 # Adidae
-A modernized e-commerce site built for an optimal user browsing experience.
+A modernized e-commerce storefront webpage built with four main components:
+- Product Overview
+- Ratings and Reviews
+- Questions and Answers
+- Related Items and Outfits
 
 
 ## Authors
@@ -11,14 +15,6 @@ This project was created by:
 
 ### Built With
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)![NodeJS](https://img.shields.io/badge/Node.js-154a10?style=for-the-badge&logo=node.js)![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux)![Jest](https://img.shields.io/badge/jest-DB7093?style=for-the-badge&logo=jest)![HTML5](https://img.shields.io/badge/HTML5-802d16?style=for-the-badge&logo=html5)![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3)![AWS](https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws)![Tailwind](https://img.shields.io/badge/Tailwind-1572B6?style=for-the-badge&logo=tailwindcss)![Webpack](https://img.shields.io/badge/Webpack-6ba5bf?style=for-the-badge&logo=webpack)![Babel](https://img.shields.io/badge/Babel-b5a12d?style=for-the-badge&logo=babel)![Styled-components](https://img.shields.io/badge/styled-components-DB7093?style=for-the-badge&logo=styled-components)
-
-## Project Summary
-This project is an e-commerce storefront with four main components:
-- Product Overview
-- Ratings and Reviews
-- Questions and Answers
-- Related Items and Outfits
-
 
 ## Key Features
 - Prop-Types for typechecking React component props
