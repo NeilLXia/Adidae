@@ -1,20 +1,22 @@
-import { createSlice } from '@reduxjs/toolkit';
-import getProductDetails from './scripts/getProductDetails';
-import getProductList from './scripts/getProductList';
+import { createSlice } from "@reduxjs/toolkit";
+import getProductDetails from "./scripts/getProductDetails";
+import getProductList from "./scripts/getProductList";
 
-const API_URL = 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp';
+const API_URL = "https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp";
 
 const productSlice = createSlice({
-  name: 'product',
+  name: "product",
   initialState: {
     value: {},
     productList: [],
-    id: 40435,
-    name: 'Nostrud Excepteur',
-    category: 'Animtempor.',
+    id: 40347,
+    name: "Nostrud Excepteur",
+    category: "Animtempor.",
     default_price: 0,
-    slogan: 'Cupidatat ea dolore et veniam non voluptate sunt ad cupidatat incididunt consectetur.',
-    description: 'Laboris laborum eiusmod in labore laboris anim laborum id id occaecat laborum nulla nisi ullamco. Quis duis ullamco laboris dolor culpa eu. Cillum ipsum voluptate est qui.',
+    slogan:
+      "Cupidatat ea dolore et veniam non voluptate sunt ad cupidatat incididunt consectetur.",
+    description:
+      "Laboris laborum eiusmod in labore laboris anim laborum id id occaecat laborum nulla nisi ullamco. Quis duis ullamco laboris dolor culpa eu. Cillum ipsum voluptate est qui.",
     features: [],
     styles: [],
     selectedStyleID: [],
@@ -41,19 +43,27 @@ const productSlice = createSlice({
       state.selectedSKU = Object.keys(state.styles[0].skus)[0];
       state.sale_price = state.styles[0].sale_price;
       const photo = state.styles[0].photos[0];
-      state.selectedImage = [state.selectedStyleID, 0, photo.thumbnail_url, photo.url];
+      state.selectedImage = [
+        state.selectedStyleID,
+        0,
+        photo.thumbnail_url,
+        photo.url,
+      ];
     },
     selectStyle(state, action) {
-      const prevStyleData = state.styles
-        .find((style) => style.style_id === state.selectedStyleID);
+      const prevStyleData = state.styles.find(
+        (style) => style.style_id === state.selectedStyleID
+      );
 
       const selectedSize = prevStyleData.skus[state.selectedSKU].size;
       state.selectedStyleID = action.payload;
-      const styleData = state.styles
-        .find((style) => style.style_id === state.selectedStyleID);
-      state.selectedSKU = Object.keys(styleData.skus)
-        .find((sku) => styleData.skus[sku].size === selectedSize)
-        || Object.keys(styleData.skus)[0];
+      const styleData = state.styles.find(
+        (style) => style.style_id === state.selectedStyleID
+      );
+      state.selectedSKU =
+        Object.keys(styleData.skus).find(
+          (sku) => styleData.skus[sku].size === selectedSize
+        ) || Object.keys(styleData.skus)[0];
       state.sale_price = styleData.sale_price;
     },
     selectSize(state, action) {

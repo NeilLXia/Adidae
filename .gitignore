@@ -6,3 +6,4 @@ temp/
 *.env
 node_modules
 coverage
+.vercel
