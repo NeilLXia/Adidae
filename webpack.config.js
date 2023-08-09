@@ -53,8 +53,8 @@ module.exports = {
       },
     ],
   },
+  
   plugins: [
-
     new HtmlWebpackPlugin({
       title: 'Atelier',
       template: path.resolve(__dirname, '/templates/template.html'),
