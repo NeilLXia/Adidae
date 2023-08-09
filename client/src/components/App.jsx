@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import React, { useEffect } from "react";
 import Modal from "@modular/Modal";
 import { useSelector } from "react-redux";
@@ -8,7 +9,7 @@ import QuestionsAnswers from "./questionsAnswers";
 import RelatedItems from "./relatedItems";
 
 const appStyles =
-  "max-w-[950px] grid grid-flow-row auto-rows-max mx-auto shadow-sm" +
+  "max-w-[390px] md:max-w-[950px] grid grid-flow-row auto-rows-max mx-auto shadow-sm" +
   " bg-primary-100 text-gray-700 dark:bg-secondary-100 dark:text-gray-300";
 const backgroundStyles =
   "w-full h-full bg-slate-300 dark:bg-neutral-900 overflow-x-hidden";
@@ -52,22 +53,22 @@ function App() {
             }
             `}
           </style>
-          <div className="row-span-1">
+          <div className="row-span-1 grow max-w-[390px] md:max-w-[950px]">
             <HeaderBar />
           </div>
-          <div className="row-span-1 mx-auto min-w-[390px] md:max-w-[950]">
+          <div className="row-span-1 grow max-w-[390px] md:max-w-[950px]">
             <ProductOverview />
           </div>
           <div
             id="ratingsReviewMark"
-            className="row-span-1 p-10 mx-auto max-w-[390px] md:max-w-[950px]"
+            className="row-span-1 p-10 grow max-w-[390px] md:max-w-[950px]"
           >
             <RatingsReviews />
           </div>
-          <div className="row-span-1 p-5 mx-auto w-full md:max-w-[950]">
+          <div className="row-span-1 p-5 grow max-w-[390px] md:max-w-[950px]">
             <QuestionsAnswers />
           </div>
-          <div className="row-span-1 p-10 mx-auto md:max-w-[950]">
+          <div className="row-span-1 p-10 grow max-w-[390px] md:max-w-[950px]">
             <RelatedItems />
           </div>
           {rendered ? <Modal /> : null}
